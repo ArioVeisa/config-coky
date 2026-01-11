@@ -32,4 +32,5 @@ sudo apt update
 sudo apt install conky-all lm-sensors -y
 
 
-![Uploading image.png…]()
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/435327ea-59c3-4a2d-b02f-22ec6456ce45" />
+
