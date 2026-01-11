@@ -1,0 +1,64 @@
+conky.config = {
+    alignment = 'top_right',
+    gap_x = 10,
+    gap_y = 10,
+
+    update_interval = 1,
+    double_buffer = true,
+    no_buffers = true,
+
+    own_window = true,
+    own_window_type = 'normal',
+    own_window_transparent = true,
+    own_window_argb_visual = true,
+    own_window_argb_value = 40,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+    use_xft = true,
+    font = 'DejaVu Sans Mono:size=9',
+    default_color = '455a64',
+
+    draw_shades = false,
+    draw_outline = false,
+    draw_borders = false,
+    draw_graph_borders = false,
+
+    minimum_width = 300,
+};
+
+conky.text = [[
+${font DejaVu Sans Mono:bold:size=12}${color 263238}SYSTEM
+${color 90a4ae}${hr 1}
+${font size=9}${color 455a64}Host${alignr}${nodename}
+Kernel${alignr}${kernel}
+Up${alignr}${uptime}
+Proc${alignr}${processes}
+
+${font DejaVu Sans Mono:bold:size=11}${color 37474f}CPU
+${color 90a4ae}${hr 1}
+${color 455a64}Use${alignr}${cpu}%
+${color 78909c}${cpubar 4,280}
+${color 455a64}Temp${alignr}${acpitemp}°C
+${color 90a4ae}${cpugraph 12,280}
+${color 546e7a}${top name 1}${alignr}${top cpu 1}%
+${top name 2}${alignr}${top cpu 2}%
+
+${font DejaVu Sans Mono:bold:size=11}${color 37474f}MEM
+${color 90a4ae}${hr 1}
+${color 455a64}${mem} / ${memmax}
+${color 78909c}${membar 4,280}
+${color 546e7a}${top_mem name 1}${alignr}${top_mem mem_res 1}
+${top_mem name 2}${alignr}${top_mem mem_res 2}
+
+${font DejaVu Sans Mono:bold:size=11}${color 37474f}DISK
+${color 90a4ae}${hr 1}
+${color 455a64}${fs_used /} / ${fs_size /}
+${color 78909c}${fs_bar 4,280 /}
+
+${font DejaVu Sans Mono:bold:size=11}${color 37474f}NET
+${color 90a4ae}${hr 1}
+${color 455a64}Donwload${alignr}${downspeedf wlp3s0} KB/s
+${color 90a4ae}${downspeedgraph wlp3s0 12,280}
+${color 455a64}Upload${alignr}${upspeedf wlp3s0} KB/s
+${color 90a4ae}${upspeedgraph wlp3s0 12,280}
+]]
